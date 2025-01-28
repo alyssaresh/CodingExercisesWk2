@@ -128,12 +128,74 @@ second parameter's value
 
 15. There is an object x which has a method (double)Balance(). Build an IF statement 
 that prints "Paid Off" if the result of the balance call is less than of equal to 1.0, 
-else it prints the balance as a Dollar figure (2 decimal places) 
-16. Build a WHILE loop that turns on the heat if the thermo.getTemp() is less than 72.0 else it turns on the A/C if thermo.getTemp() is greater that 76.0.
+else it prints the balance as a Dollar figure (2 decimal places)
+
+    void printBalance(){
+    if (x.Balance() <= 1.0){
+    System.out.println("Paid Off");
+    } else {
+    System.out.printf(%.2f, x.Balance());
+    }
+    }
+
+16. Build a WHILE loop that turns on the heat if the thermo.getTemp() is less than 72.0 
+else it turns on the A/C if thermo.getTemp() is greater that 76.0.
+
+    void changeTemp(Thermo thermo){
+    while(true){
+    if (thermo.getTemp() < 72.0){
+    System.out.println("Heat on");
+    } else if (thermo.getTemp() > 76.0){
+    System.out.println("AC on");
+    } else {
+    System.out.println("Just right");
+    break;
+    }
+    }
+    
 17. Find a number greater than Pi in a double array, print number and its index.
-18. Given an array of objects (of class Xaction) w/nulls, sum all the values of the objects in the array, using Xaction::getValue() to get the object's value. Print the sum after the loop.
+    void greaterPi(double[][] array){
+    for (int i = 0; i<array.length; i++){
+        for (int j = 0; j<array[i].length; j++){
+           if (array[i][j] > Math.PI) {
+           System.out.println("Value " + array[i][j] + " is at index " + i + " and " + j + ".");
+           }
+        }
+    }
+    }
+    
+18. Given an array of objects (of class Xaction) w/nulls, sum all the values of the 
+objects in the array, using Xaction::getValue() to get the object's value. 
+Print the sum after the loop.
+
+    void printSum(Xaction[] objects){
+    int sum = 0;
+    for (Xaction obj : objects){
+    if (obj != null){
+    sum += obj.getValue();
+    } 
+    }
+    } System.out.println(sum);
+    }
+
 19. reverse an array of objects of type Xaction
+
+    void reverseArray(Xaction[] objects){
+    int start = 0;
+    int end = objects.length - 1; 
+    Xaction temp;
+    while (start < end) {
+    temp = objects[start]
+    objects[start] = objects[end]
+    objects[end] = temp;
+    start += 1;
+    end -= 1;
+    }
+    }
+
 20. Print a 5's times table
+
+    
 21. detemine the hypotenuse of a 9 by 7 right triangle, assign it to a double
 
 ### Class Use
