@@ -194,9 +194,16 @@ Print the sum after the loop.
     }
 
 20. Print a 5's times table
+    void fivesTable(){
+    for (int i = 0; i <= 10; i++){
+    System.out.println(i + " x 5 = " + (i*5));
+    }
+    }
 
-    
 21. detemine the hypotenuse of a 9 by 7 right triangle, assign it to a double
+    double calculateHypotenuse(double sideA, double sideB){
+    return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+    }
 
 ### Class Use
 Use groups of 2-4, each group at a whiteboard (or online using a shared google doc), sketching out the answers.
